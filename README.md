@@ -1,4 +1,4 @@
-# Welcome to KrptoBux 👄
+# Welcome to KrptoBux 🔥
 
 All the code in these repos was created with the help of HashLips code and some features on that.
 
