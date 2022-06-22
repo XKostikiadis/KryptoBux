@@ -28,6 +28,10 @@ npm install
 
 ## Before Creation!
 
+### Create Those Folders inside Directory: AllTeamsSortedFencing , AllTeamsSortedNotFencing, FolderOfAllTeamLayersPerItem
+
+![image](https://user-images.githubusercontent.com/72341781/175108966-808ef01a-1bcd-4f07-980c-e9e7f761f03c.png)
+
 Layers should be following some specifications. Those are:
 
 - Layer dimensions are 3000x3000
@@ -48,7 +52,7 @@ Layers should be following some specifications. Those are:
   - **Polo Hemd:** itemName **Example:** Hemd
 
 
-Make sure that folder FolderOfAllTeamLayersPerItem has every subfolder as shown below:
+Make sure that folder FolderOfAllTeamLayersPerItem has every subfolder (if not create them) as shown below:
 
 ![image](https://user-images.githubusercontent.com/72341781/174906696-1a91c289-f021-4fa1-af92-4c4b80f889fe.png)
 
