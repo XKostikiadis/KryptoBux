@@ -12,7 +12,7 @@ const baseUri = "ipfs://NewUriToReplace";
 const layerConfigurations = [
   {
     //! FUX - ANZUG
-    growEditionSizeTo: 12, //? 6 !! 12
+    growEditionSizeTo: 12,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Fux" },
@@ -25,7 +25,7 @@ const layerConfigurations = [
 
   {
     //! FUX - NORMAL
-    growEditionSizeTo: 30, //? 15 !! 30
+    growEditionSizeTo: 30,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Fux" },
@@ -38,7 +38,7 @@ const layerConfigurations = [
 
   {
     //! FUX - CHARGE
-    growEditionSizeTo: 36, //? 18 !! 36
+    growEditionSizeTo: 36,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Fux" },
@@ -51,7 +51,7 @@ const layerConfigurations = [
 
   {
     //! FUX - KettenHemd
-    growEditionSizeTo: 38, //? 38
+    growEditionSizeTo: 38,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Fux" },
@@ -64,7 +64,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - ANZUG
-    growEditionSizeTo: 40, //? 24 !! 40
+    growEditionSizeTo: 40,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -77,7 +77,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - NORMAL
-    growEditionSizeTo: 58, //? 33  !! 58
+    growEditionSizeTo: 58,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -90,7 +90,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - ANZUG-BIER
-    growEditionSizeTo: 62, //? 35 !! 62
+    growEditionSizeTo: 62,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -103,7 +103,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - NORMAL-BIER
-    growEditionSizeTo: 68, //? 38 !! 68
+    growEditionSizeTo: 68,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -116,7 +116,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - KettenHemd
-    growEditionSizeTo: 70, //? 70
+    growEditionSizeTo: 70,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -129,7 +129,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - CHARGE
-    growEditionSizeTo: 76, //? 41 !! 76
+    growEditionSizeTo: 76,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -142,7 +142,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - CHARGE-BIER
-    growEditionSizeTo: 78, //? 42 !! 78
+    growEditionSizeTo: 78,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "Bursch" },
@@ -155,7 +155,7 @@ const layerConfigurations = [
 
   {
     //! ALTEHERR - ANZUG
-    growEditionSizeTo: 94, //? 50 !! 94
+    growEditionSizeTo: 94,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "AlteHerr" },
@@ -168,7 +168,7 @@ const layerConfigurations = [
 
   {
     //! ALTEHERR - NORMAL
-    growEditionSizeTo: 118, //? 62 !! 118
+    growEditionSizeTo: 118,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "AlteHerr" },
@@ -181,7 +181,7 @@ const layerConfigurations = [
 
   {
     //! BURSCH - CHARGE
-    growEditionSizeTo: 126, //? 66 !! 126
+    growEditionSizeTo: 126,
     layersOrder: [
       { name: "Hintergrund" },
       { name: "AlteHerr" },
