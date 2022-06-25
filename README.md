@@ -920,3 +920,187 @@ run the code at the top right:
 ## Well Done Collection Has Been Created!
 
 # Mint Process 
+
+### First You need an API KEY from NFTPort
+
+Please visit: https://www.nftport.xyz and create Free/Growth/Enterprise Authentication Key.
+
+## Coding Part
+
+Head to Config.js file at line 354 and below are the NFRPort info section where you will need to do the more changes!
+
+At line 356 replace the "Your API KEY" with the one you have create from NFTPort!
+
+```js
+const AUTH = "Your API KEY";
+```
+
+Your API KEY rate limit it needs to be 1 ( Do not change it ) 
+
+Dont forget to create your own Contract name and symbol so: 
+
+```js
+const CONTRACT_NAME = "Your Contract Name"; // Contract Name it will be visible in the Collection
+const CONTRACT_SYMBOL = "Your Contract Symbol";
+```
+
+Contract Type is erc721:
+
+```js
+const CONTRACT_TYPE = "erc721";
+```
+
+CHAIN: Polygon or Rinkeby ( rinkeby is the test network / polygon the publish network ) 
+
+```js
+const CHAIN = "rinkeby"; //? polygon
+```
+
+MiNT_TO_ADDRESS and ROYALTY_ADDRESS you want to be the same ( it may be different if you want the royalty to be received elsewhere ) 
+
+```js
+const MINT_TO_ADDRESS = "YOUR ETH ADDRESS"; // YOUR ETH ADDRESS
+const ROYALTY_ADDRESS = "YOUR ROYALTY ETH ADDRESS"; // Address that will receive the royalty
+```
+
+Royalty: Percentage of the token price that goes to the royalty address. 1000 bps = 10% 
+
+```js
+const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+```
+
+### Contract ADDRESS WILL BE CHANGED LATER 
+
+```js
+let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
+```
+
+
+### if you want to make a NFT Collection reaveal you need to change the code:
+
+```js
+// Generic Metadata is optional if you want to reveal your NFTs
+const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC_TITLE = "Unknown"; // Replace with what you want the generic titles to say.
+const GENERIC_DESCRIPTION = "Unknown"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = [
+  "YOUR IMAGE URL ",
+]; // Replace with your generic image(s). If multiple, separate with a comma.
+```
+
+Example:
+
+```js
+// Generic Metadata is optional if you want to reveal your NFTs
+const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC_TITLE = "Gastava"; // Replace with what you want the generic titles to say.
+const GENERIC_DESCRIPTION = "Gastava's Collection Reaveal"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = [
+   "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
+]; // Replace with your generic image(s). If multiple, separate with a comma.
+```
+
+
+<details> 
+<summary>Code will Look Like this:</summary>
+   
+  
+```js
+const AUTH = "bbbb7b73-6551-4379-8974-3f2827304cd0";
+const LIMIT = 1; // Your API key rate limit
+const CONTRACT_NAME = "Gastava"; // Contract Name it will be visible in the Collection
+const CONTRACT_SYMBOL = "GA";
+const CONTRACT_TYPE = "erc721";
+const MINT_TO_ADDRESS = "0xB3E9f7CE3129FBF7A5dAe697cd59E56f8198FDaA"; // YOUR ETH ADDRESS
+const CHAIN = "rinkeby"; //? polygon
+const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
+const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+const ROYALTY_ADDRESS = "0xB3E9f7CE3129FBF7A5dAe697cd59E56f8198FDaA"; // Address that will receive the royalty
+// ** OPTIONAL **
+let CONTRACT_ADDRESS = "0x56436b20177613D5596D25aca24C02026034F5eD"; // If you want to manually include it
+// Generic Metadata is optional if you want to reveal your NFTs
+const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC_TITLE = "Unknown"; // Replace with what you want the generic titles to say.
+const GENERIC_DESCRIPTION = "Unknown"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = [
+  "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
+]; // Replace with your generic image(s). If multiple, separate with a comma.
+const REVEAL_PROMPT = true; // Set to false if you want to disable the prompt to confirm each reveal.
+const INTERVAL = 900000; // Milliseconds. This is the interval for it to check for sales and reveal the NFT. 900000 = 15 minutes.
+
+```
+</details>
+
+## Upload to IPFS
+
+It is time to start uploading the images/JSON to IPFS. Do not forget to change the value from false to true if the collection will have a reveal!
+
+First open the terminal and type npm run upload_files it may take some hours depending on the size and the number of images. ( JSON file will update with the URL of the image)
+
+```sh
+npm run upload_files 
+```
+![image](https://user-images.githubusercontent.com/72341781/175771577-c39e73e8-3b15-449b-bb8c-68238c704801.png)
+![image](https://user-images.githubusercontent.com/72341781/175771580-2a3d3254-2479-4052-8e87-98d85584160b.png)
+
+After the upload of the files. Go ahead and type npm run upload_metadata. Metadata will start uploading and the ipfsMetas Folder will created (if Generic was true one type  npm run create_generic to create the genericJson folder)
+
+```sh
+npm run upload_metadata
+```
+
+![image](https://user-images.githubusercontent.com/72341781/175771609-acd7c44e-651a-4ba3-9e0e-55a2d45a1bf8.png)
+![image](https://user-images.githubusercontent.com/72341781/175771613-1ce841e8-8bcf-4e9d-a974-6f7dae8a2b83.png)
+
+## Deploy Contract 
+
+Next step is to upload the contract. If every data given in the config is valid the contract will start uploading.
+
+In terminal type npm run deploy_contract
+
+```sh
+npm run deploy_contract
+```
+
+![image](https://user-images.githubusercontent.com/72341781/175771727-c2e14102-c905-40dc-bf60-537edc681edd.png)
+
+
+When contract deployed successfully type npm run get_contract (if an error occur try later)
+
+```sh
+npm run get_contract
+```
+
+![image](https://user-images.githubusercontent.com/72341781/175771733-3ff0ccd0-38cc-40ae-9274-a9a0ecf8c085.png)
+
+
+### You need to change the CONTRACT ADDRESS in the config.js file!
+
+Head to build/contract/contract.json file and take the address:
+
+![image](https://user-images.githubusercontent.com/72341781/175771790-90a15ad7-2816-4a9a-8ed4-9f5d5091876a.png)
+
+Now go in the config.js file and change the line 367 with the contract address you copied.
+
+![image](https://user-images.githubusercontent.com/72341781/175771829-2d3ed96f-d5ea-4dc0-9168-16d8c88d8dd5.png)
+
+
+## Minting 
+
+Final step is to mint the collection so in terminal type npm run mint. 
+
+```sh
+npm run mint
+```
+
+Minting will start after completion it is possible to check if something went wrong with the command npm run check_txns --dir=minted
+
+
+# KrptoBux 🔥
+
+For any questions or help contact:
+
+Email: xristoskostikiadis@gmail.com
+Discord: Gastava#6827
+WhatsApp: +30 6978038428 
+
