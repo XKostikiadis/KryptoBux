@@ -1093,7 +1093,11 @@ Final step is to mint the collection so in terminal type npm run mint.
 npm run mint
 ```
 
-Minting will start after completion it is possible to check if something went wrong with the command npm run check_txns --dir=minted
+Minting will start! After completion it is possible to check if something went wrong, with the command npm run check_txns --dir=minted
+
+```sh
+npm run check_txns --dir=minted
+```
 
 
 # KrptoBux 🔥
